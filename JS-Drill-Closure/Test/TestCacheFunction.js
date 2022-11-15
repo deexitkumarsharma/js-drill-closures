@@ -1,16 +1,15 @@
 let cacheFunction = require('../cacheFunction')
 
 function inputValue(x){
-return x;
+return x
 }
+let y = cacheFunction(inputValue)
 
-let invokeCallBack = cacheFunction(inputValue());
-
-console.log(inputValue('Mountblue'));
-console.log(inputValue('is'));
-console.log(inputValue('best'));
-console.log(inputValue('place'));
-console.log(inputValue('for'));
-console.log(inputValue('start'));
-console.log(inputValue('our'));
-console.log(inputValue('Career'));
+console.log(y('Mountblue'));
+console.log(y('is'));
+console.log(y('best'));
+console.log(y('place'));
+console.log(y('for'));
+console.log(y('boost-up'));
+console.log(y('our'));
+console.log(y('Career'));

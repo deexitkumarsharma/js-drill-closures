@@ -1,11 +1,12 @@
 function cacheFunction(cb){
     let cacheobj = {};
     return function invokeCb (arg){
-        if(cacheobj.arg === undefined){
-            cacheobj.arg = cb();
-            return cacheobj.arg;
+        if(cacheobj.hasOwnProperty(arg)){
+            console.log(cacheobj);
+            return cacheobj[arg]
         }else {
-            return cacheobj.arg;
+            cacheobj[arg] = cb(arg)
+            return cacheobj[arg];
         }
     }
 }
